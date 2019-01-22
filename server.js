@@ -54,8 +54,16 @@ app.post("/api/exercise/new-user", (req, res) => {
 
 app.post("/api/exercise/add", (req, res, next) => {
   userModel.findById(req.body.userId, (err, user) => {
-  let logs = new logModel(req.body)
   
+  if(err) return next(err)
+  if(!user) {
+    return next({
+    status: 400,
+      message: 'unknown id'
+    })
+  }
+    
+  let logs = new logModel(req.body)
   logs.username = user.username
     console.log(logs)
   if(logs.date === null) {
