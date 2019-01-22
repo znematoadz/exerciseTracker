@@ -2,24 +2,24 @@
 <html>
 
    <head>
-      <title>Exercise Tracker | Free Code Camp</title>
-      <link rel="shortcut icon" href="https://cdn.hyperdev.com/us-east-1%3A52a203ff-088b-420f-81be-45bf559d01b1%2Ffavicon.ico" type="image/x-icon"/>
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Exercise Tracker</title>
+      <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
       <link href="style.css" rel="stylesheet" type="text/css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
    </head>
 
-   <body>
-      <div class="container">
+   <body class="d-flex justify-content-center align-items-center flex-column ">
+      <div class="container col-xs-10 col-md-8 col-lg-6 col-xl-4 text-center">
          <h1>Exercise tracker</h1>
-          <form action="/api/exercise/new-user" method="post">
+          <form class="bg-info shadow" action="/api/exercise/new-user" method="post">
             <h3>Create a New User</h3>
-            <p><code>POST /api/exercise/new-user</code></p>
             <input id="uname" type="text" name="username" placeholder="username">
             <input type="submit" value="Submit">
           </form>
-          <form action="/api/exercise/add" method="post">
+          <form class="bg-info shadow" action="/api/exercise/add" method="post">
             <h3>Add exercises</h3>
-            <p><code>POST /api/exercise/add</code></p>
             <input id="uid" type="text" name="userId" placeholder="userId*">
             <input id="desc" type="text" name="description" placeholder="description*">
             <input id="dur" type="text" name="duration" placeholder="duration* (mins.)">
